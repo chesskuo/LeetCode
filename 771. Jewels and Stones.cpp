@@ -1,15 +1,17 @@
-// 0 ms, 8.4 MB
+// 0 ms, 8.3 MB
 
-class Solution {
+class Solution
+{
 public:
-    int numJewelsInStones(string J, string S) {
-        int a[256] = {0};
-        for(char i : J) ++a[i];
-        int cnt =0;
-        for(char i : S) if(a[i]) ++cnt;
+    int numJewelsInStones(string J, string S)
+    {
+        int cnt = 0;
+        for(char i : S)
+            if(J.find(i) != string::npos)
+                ++cnt;
         return cnt;
     }
-}
+};
 
 
 
